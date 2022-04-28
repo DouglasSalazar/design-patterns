@@ -1,4 +1,3 @@
-
 interface Polygon {
     getNumberOfSides(): Number;
 }

@@ -1,5 +1,3 @@
-
-
 export class Product {
     public name: String;
     public value: Number;

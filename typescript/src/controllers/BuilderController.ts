@@ -1,6 +1,5 @@
 import { Builder, Product } from "../patterns/Builder";
 
-
 export class BuilderController {
 
     public static execute (): Product[] {
