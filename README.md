@@ -11,6 +11,9 @@ O Factory Method é um padrão criacional de projeto que fornece uma interface p
 ## Singleton
 O Singleton é um padrão de projeto criacional que permite a você garantir que uma classe tenha apenas uma instância, enquanto provê um ponto de acesso global para essa instância.
 
+## Adapter
+O Adapter atua como um wrapper entre dois objetos. Ele captura chamadas para um objeto e as deixa reconhecíveis tanto em formato como interface para este segundo objeto.
+
 ## Intalação
 
 ```bash
