@@ -1,4 +1,5 @@
 import express from "express";
+import { AdapterController } from "./controllers/AdapterController";
 import { BuilderController } from "./controllers/BuilderController";
 import { FactoryController } from "./controllers/FactoryController";
 import { SingletonController } from "./controllers/SingletonController";
@@ -32,6 +33,16 @@ routers.post("/factory", async (request, response) => {
         const typePolygon = request.body.typePolygon;
         const NumberOfSides: Number = FactoryController.execute(typePolygon);
         return response.status(200).send({response: NumberOfSides})
+
+    } catch(err) {
+        return response.status(400).send({ err: err});
+    }
+});
+
+routers.get("/adapter", async (request, response) => {
+    try {
+        const adapterController: AdapterController = new AdapterController();
+        return response.status(200).send({response: adapterController.execute()})
 
     } catch(err) {
         return response.status(400).send({ err: err});
